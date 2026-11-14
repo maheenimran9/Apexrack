@@ -78,8 +78,8 @@ export default function Navbar() {
       </div>
 
       {/* Main Sticky Navigation Bar */}
-      <header className="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200/90 shadow-[0_1px_3px_rgba(20,36,58,0.04)]">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-[72px] flex items-center justify-between gap-6 lg:gap-8">
+      <header className="sticky top-0 z-40 w-full bg-white/95 backdrop-blur-md border-b border-slate-200/90 shadow-[0_1px_3px_rgba(20,36,58,0.04)]">
+        <div className="max-w-6xl mx-auto px-3.5 sm:px-6 lg:px-8 h-16 sm:h-[72px] flex items-center justify-between gap-2 sm:gap-6 lg:gap-8">
           {/* Zone 1: Brand Wordmark */}
           <Link
             to="/"
@@ -283,10 +283,10 @@ export default function Navbar() {
           </nav>
 
           {/* Zone 3: Single Primary Action + Mobile Drawer Toggle */}
-          <div className="flex items-center gap-3 shrink-0">
+          <div className="flex items-center gap-2 sm:gap-3 shrink-0">
             <Link
               to="/request-quote"
-              className="px-4 sm:px-5 py-2.5 min-h-[44px] inline-flex items-center justify-center text-[15px] sm:text-sm font-semibold text-white bg-[#F07824] hover:bg-[#D86617] rounded-[20px] transition-[transform,background-color] duration-150 agency-ease hover:-translate-y-px active:scale-[0.98] whitespace-nowrap shrink-0 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#14243A]"
+              className="px-3 sm:px-5 py-2 sm:py-2.5 min-h-[40px] sm:min-h-[44px] inline-flex items-center justify-center text-[13px] sm:text-sm font-semibold text-white bg-[#F07824] hover:bg-[#D86617] rounded-[20px] transition-[transform,background-color] duration-150 agency-ease hover:-translate-y-px active:scale-[0.98] whitespace-nowrap shrink-0 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#14243A]"
             >
               Request a Quote
             </Link>
@@ -296,7 +296,7 @@ export default function Navbar() {
               onClick={() => setMobileOpen((prev) => !prev)}
               aria-expanded={mobileOpen}
               aria-label={mobileOpen ? 'Close navigation menu' : 'Open navigation menu'}
-              className="lg:hidden inline-flex items-center justify-center w-11 h-11 rounded-[20px] border border-slate-200 text-[#14243A] hover:bg-[#F4F6F8] transition-[transform,background-color] duration-150 active:scale-95 cursor-pointer"
+              className="lg:hidden inline-flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 rounded-[20px] border border-slate-200 bg-white text-[#14243A] hover:bg-[#F4F6F8] transition-[transform,background-color] duration-150 active:scale-95 shrink-0 cursor-pointer"
             >
               {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
             </button>
@@ -375,7 +375,13 @@ export default function Navbar() {
             </Link>
 
             <div className="pt-4 mt-3 border-t border-slate-200 space-y-3.5 px-3">
-              <div className="flex items-center gap-2.5 text-base text-[#202B38]">
+              <Link
+                to="/request-quote"
+                className="w-full py-3 px-5 min-h-[46px] inline-flex items-center justify-center text-base font-semibold text-white bg-[#F07824] hover:bg-[#D86617] rounded-[20px] transition-colors duration-150"
+              >
+                Request a Quote
+              </Link>
+              <div className="flex items-center gap-2.5 text-base text-[#202B38] pt-1">
                 <Phone className="w-4 h-4 text-[#F07824] shrink-0" />
                 <a href={COMPANY_CONTACT.primaryPhoneHref} className="font-mono tabular-nums font-medium">
                   {COMPANY_CONTACT.primaryPhone}

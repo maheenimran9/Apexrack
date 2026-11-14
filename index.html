@@ -33,14 +33,16 @@
       #apx-pre, #apx-pre * { box-sizing: border-box; }
       #apx-pre { overflow-x: hidden; font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; color: #202B38; }
       .apx-top-strip { display: none; background: #0C1726; color: #CBD5E1; border-bottom: 1px solid rgba(255,255,255,0.1); font-size: 13px; }
-      .apx-wrap { max-width: 1152px; margin: 0 auto; padding: 0 24px; }
+      .apx-wrap { max-width: 1152px; margin: 0 auto; padding: 0 14px; }
       .apx-nav { background: #FFFFFF; border-bottom: 1px solid #E2E8F0; }
-      .apx-nav-inner { height: 72px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+      .apx-nav-inner { height: 64px; display: flex; align-items: center; justify-content: space-between; gap: 8px; }
       .apx-links { display: none; align-items: center; gap: 24px; font-size: 15px; font-weight: 500; color: rgba(32,43,56,0.85); }
       .apx-links a { color: inherit; text-decoration: none; white-space: nowrap; }
       .apx-hero { background: #14243A; color: #FFFFFF; border-bottom: 1px solid rgba(255,255,255,0.1); padding: 36px 0 44px; }
       .apx-hero-grid { display: grid; grid-template-columns: 1fr; gap: 28px; align-items: center; }
       @media (min-width: 640px) {
+        .apx-wrap { padding: 0 24px; }
+        .apx-nav-inner { height: 72px; gap: 16px; }
         .apx-top-strip { display: block; }
         .apx-hero { padding: 44px 0 52px; }
       }
@@ -67,15 +69,15 @@
 
         <header class="apx-nav">
           <div class="apx-wrap apx-nav-inner">
-            <a href="#/" style="display:inline-flex;align-items:center;gap:12px;text-decoration:none;flex-shrink:0;">
-              <svg viewBox="0 0 32 32" width="32" height="32" aria-hidden="true">
+            <a href="#/" style="display:inline-flex;align-items:center;gap:8px;text-decoration:none;flex-shrink:0;">
+              <svg viewBox="0 0 32 32" width="28" height="28" aria-hidden="true">
                 <rect width="32" height="32" rx="3" fill="#14243A" />
                 <rect x="7" y="6" width="3.5" height="20" fill="#FFFFFF" />
                 <rect x="21.5" y="6" width="3.5" height="20" fill="#FFFFFF" />
                 <rect x="10.5" y="10" width="11" height="3" fill="#F07824" />
                 <rect x="10.5" y="18.5" width="11" height="3" fill="#F07824" />
               </svg>
-              <span style="font-weight:700;font-size:20px;color:#14243A;letter-spacing:-0.02em;">ApexRack</span>
+              <span style="font-weight:700;font-size:17px;color:#14243A;letter-spacing:-0.02em;">ApexRack</span>
             </a>
 
             <nav class="apx-links" aria-label="Primary Navigation">
@@ -89,7 +91,7 @@
 
             <a
               href="#/request-quote"
-              style="display:inline-flex;align-items:center;justify-content:center;padding:10px 20px;min-height:44px;background:#F07824;color:#FFFFFF;font-size:14px;font-weight:600;border-radius:20px;text-decoration:none;white-space:nowrap;flex-shrink:0;"
+              style="display:inline-flex;align-items:center;justify-content:center;padding:8px 14px;min-height:40px;background:#F07824;color:#FFFFFF;font-size:13px;font-weight:600;border-radius:20px;text-decoration:none;white-space:nowrap;flex-shrink:0;"
             >
               Request a Quote
             </a>

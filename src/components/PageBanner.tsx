@@ -50,7 +50,7 @@ export default function PageBanner({
           </div>
 
           {highlights && highlights.length > 0 && (
-            <dl className="grid grid-cols-3 gap-2.5 sm:gap-3 lg:min-w-[380px] shrink-0">
+            <dl className="grid grid-cols-1 min-[440px]:grid-cols-3 gap-2.5 sm:gap-3 lg:min-w-[380px] shrink-0">
               {highlights.map((item) => (
                 <div
                   key={item.label}
