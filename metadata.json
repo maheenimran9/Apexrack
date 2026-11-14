@@ -1,0 +1,6 @@
+{
+  "name": "ApexRack Industrial Solutions",
+  "description": "Commercial warehouse pallet racking, cantilever systems, boltless shelving, and structural mezzanine floors for logistics and fulfillment operations across the US, UK, Canada, and UAE.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
