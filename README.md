@@ -1,20 +1,19 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+### ApexRack Industrial Solutions — B2B Warehouse Racking & Storage Platform
 
-# Run and deploy your AI Studio app
+**Role:** Frontend Developer
 
-This contains everything you need to run your app locally.
+**Tech Stack:** React 19, TypeScript, Tailwind CSS, GSAP, Vite
 
-View your app in AI Studio: https://ai.studio/apps/c1052972-83d8-4f7d-94ef-63a19b1aed6c
+Designed and built a multi-page B2B website for an international industrial warehouse racking supplier (UK, USA, Canada, UAE). Built with a focus on instant 3-second clarity so operations managers immediately understand the offering and can request custom quotes across all devices.
 
-## Run Locally
+#### What I Built & Solved:
 
-**Prerequisites:**  Node.js
+* **Lightning-Fast Performance:** Cut heavy icon bloat (down from ~3.8MB) and ensured instant first-paint loading so users see real content and CTAs without delay.
+* **Smart Information Architecture:** Created a clean multi-page layout (Products, Specs, Industries, Quote Flow) optimized for both desktop and mobile reading.
+* **Interactive Tools:**
+* 8-system catalog with live search, filtering, and side-by-side comparison.
+* Interactive bay load capacity estimator and downloadable spec sheets.
+* Persistent quote shortlist (RFQ) saved via `localStorage` with a complete checkout and confirmation receipt flow.
 
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+* **Smooth, Lightweight Animations:** Added responsive GSAP scroll animations that respect reduced-motion settings without hiding critical above-the-fold content.
