@@ -103,7 +103,7 @@ export default function HomePage() {
         'Beam spans, upright heights, and post guards matched cleanly to your floor plan and trucks.',
     },
     {
-      badge: 'Turnkey Crew',
+      badge: 'Full Crew',
       icon: Truck,
       title: 'Supply & On-Site Installation',
       description:
@@ -113,7 +113,7 @@ export default function HomePage() {
 
   return (
     <div>
-      {/* 1. HERO SECTION — Balanced for 100% Laptop Zoom & Mobile */}
+      {/* 1. HERO SECTION */}
       <section
         ref={heroRef}
         className="relative bg-[#14243A] text-white border-b border-white/10 overflow-hidden"
@@ -133,36 +133,37 @@ export default function HomePage() {
                 className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-[20px] bg-white/8 border border-white/15 text-xs sm:text-sm font-medium text-slate-200"
               >
                 <Layers className="w-3.5 h-3.5 text-[#F07824]" aria-hidden="true" />
-                <span>Warehouse Racking &amp; Storage Systems</span>
+                <span>Free Floor Drawing · Dispatch in 5–7 Business Days</span>
               </div>
 
               <h1
                 data-hero-stagger
-                className="font-display text-[clamp(2rem,8vw,2.45rem)] sm:text-4xl lg:text-[44px] font-bold text-white leading-[1.12] sm:leading-[1.08] tracking-tight [text-wrap:balance]"
+                className="font-display text-[clamp(1.95rem,8vw,2.45rem)] sm:text-4xl lg:text-[42px] font-bold text-white leading-[1.12] sm:leading-[1.08] tracking-tight [text-wrap:balance]"
               >
-                Smarter Warehouse Storage. More Space. Better Flow.
+                Fit More Stock in Your Warehouse, Without Moving Building.
               </h1>
 
               <p
                 data-hero-stagger
                 className="text-base sm:text-[17px] leading-relaxed text-slate-300 max-w-xl"
               >
-                Heavy-duty pallet racking, industrial shelving, and steel mezzanines built for busy
-                warehouses. Get layout help, fast delivery, and full site installation.
+                Heavy-duty pallet racking, industrial shelving, and steel mezzanines built to RMI
+                &amp; SEMA codes. We measure your floor, supply the steel, and quote within 1
+                business day.
               </p>
 
               <div data-hero-stagger className="flex flex-wrap items-center gap-3 pt-1">
-                <ActionButton to="/products" variant="primary" className="px-5 py-3 min-h-[46px]">
-                  <span>Explore Products</span>
+                <ActionButton to="/request-quote" variant="primary" className="px-5 py-3 min-h-[46px]">
+                  <span>Request a Quote</span>
                   <ArrowRight className="w-4 h-4 transition-transform duration-150 group-hover:translate-x-0.5" />
                 </ActionButton>
 
                 <ActionButton
-                  to="/request-quote"
+                  to="/products"
                   variant="outline-light"
                   className="px-5 py-3 min-h-[46px]"
                 >
-                  Request a Quote
+                  Browse All 8 Systems
                 </ActionButton>
               </div>
 
@@ -170,7 +171,7 @@ export default function HomePage() {
                 data-hero-stagger
                 className="pt-4 border-t border-white/15 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-sm text-slate-300"
               >
-                <span>Commercial supply &amp; installation</span>
+                <span>Supply &amp; on-site install · Crews booking this month</span>
                 <span className="font-mono text-xs sm:text-sm text-slate-400 whitespace-nowrap">
                   UK · USA · Canada · UAE
                 </span>
@@ -257,13 +258,13 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 2. CORE STORAGE SYSTEMS — Proportional Bento Grid */}
+      {/* 2. CORE STORAGE SYSTEMS */}
       <section className="bg-white py-11 lg:py-14 border-b border-slate-200/80">
         <Reveal className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-7">
           <SectionHeading
             eyebrow="Storage Systems"
             title="Warehouse Storage Systems"
-            description="Pick a system below to check load ratings, dimensions, and aisle options—or browse all 8 equipment lines."
+            description="Pick a system below to check load ratings, dimensions, and aisle options, or browse all 8 equipment lines."
             actionLabel={`Browse All ${PRODUCTS_DATA.length} Systems`}
             actionTo="/products"
           />
@@ -295,7 +296,7 @@ export default function HomePage() {
                   {HOME_CATEGORIES[0].shortDesc}
                 </p>
                 <div className="pt-1 inline-flex items-center gap-1.5 text-sm font-semibold text-white group-hover:text-[#F07824] transition-colors duration-150">
-                  <span>View Specs</span>
+                  <span>View Specs &amp; Sizes</span>
                   <ArrowRight className="w-4 h-4 transition-transform duration-150 group-hover:translate-x-0.5" />
                 </div>
               </div>
@@ -318,7 +319,7 @@ export default function HomePage() {
                 <div className="sm:col-span-7 p-5 flex flex-col justify-between space-y-3">
                   <div>
                     <span className="font-mono text-xs text-[#F07824] tabular-nums">
-                      {HOME_CATEGORIES[3].specHighlight}
+                      Second-Level Deck · {HOME_CATEGORIES[3].specHighlight}
                     </span>
                     <h3 className="font-display text-xl font-bold text-[#14243A] mt-1">
                       {HOME_CATEGORIES[3].name}
@@ -436,6 +437,22 @@ export default function HomePage() {
               })}
             </div>
           </div>
+
+          {/* Mid-Page Layout Help Callout */}
+          <div className="mt-8 bg-[#14243A] text-white rounded-2xl p-5 sm:p-6 flex flex-col md:flex-row md:items-center justify-between gap-4 border border-white/10">
+            <div className="space-y-1">
+              <div className="font-mono text-xs text-[#F07824] font-semibold">
+                Free Floor Drawing Included
+              </div>
+              <p className="font-display text-lg sm:text-xl font-bold">
+                Send your room dimensions, and we&apos;ll draw a bay plan and send a quote within 1 business day.
+              </p>
+            </div>
+            <ActionButton to="/request-quote" variant="primary" className="shrink-0">
+              <span>Get a Free Floor Plan</span>
+              <ArrowRight className="w-4 h-4 transition-transform duration-150 group-hover:translate-x-0.5" />
+            </ActionButton>
+          </div>
         </Reveal>
       </section>
 
@@ -446,8 +463,9 @@ export default function HomePage() {
 
       {/* 5. FINAL CTA BAND */}
       <CtaBand
-        title="Planning a Warehouse Fit-Out or Expansion?"
-        description="Send us your room dimensions, pallet weights, and target timeline for a clear written quote."
+        eyebrow="Install Crews Booking This Month · 1-Day Written Quote"
+        title="Planning a New Rack Layout or Mezzanine?"
+        description="Send your room size, ceiling height, and pallet weights for a straight written quote and floor drawing."
         ctaLabel="Request a Quote"
         ctaTo="/request-quote"
         secondaryLabel="Contact Us"

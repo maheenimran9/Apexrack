@@ -147,15 +147,20 @@ export default function IndustriesPage() {
             </div>
 
             <div className="pt-4 border-t border-slate-200 flex flex-wrap items-center justify-between gap-3">
-              <ActionButton
-                to={`/request-quote?product=${encodeURIComponent(
-                  activeIndustry.recommendedProducts[0]?.name || 'Selective Racking'
-                )}`}
-                variant="primary"
-              >
-                <span>Quote for {activeIndustry.name}</span>
-                <ArrowRight className="w-4 h-4 transition-transform duration-150 group-hover:translate-x-0.5" />
-              </ActionButton>
+              <div className="flex flex-wrap items-center gap-3">
+                <ActionButton
+                  to={`/request-quote?product=${encodeURIComponent(
+                    activeIndustry.recommendedProducts[0]?.name || 'Selective Racking'
+                  )}`}
+                  variant="primary"
+                >
+                  <span>Quote for {activeIndustry.name}</span>
+                  <ArrowRight className="w-4 h-4 transition-transform duration-150 group-hover:translate-x-0.5" />
+                </ActionButton>
+                <span className="text-xs font-mono text-slate-500">
+                  Free floor plan · 1-day quote
+                </span>
+              </div>
 
               <Link
                 to="/projects"
@@ -217,8 +222,8 @@ export default function IndustriesPage() {
       </div>
 
       <CtaBand
-        title="Need Racking Built Around Your Industry?"
-        description="Talk with our team to pick the safest, highest-density layout for your facility."
+        title="Need Racking Built Around Your Warehouse?"
+        description="Talk with our team to pick a safe, practical layout that fits your stock and forklifts."
       />
     </div>
   );

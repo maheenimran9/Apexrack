@@ -143,7 +143,7 @@ export const PRODUCTS_DATA: ProductItem[] = [
     image: driveInRackImg,
     diagramType: 'selective',
     overview:
-      'Drive-in racking lets forklifts drive straight into deep storage lanes to stack pallets one behind another. By cutting out multiple side aisles, you store up to 75% more pallets in the same floor footprint—especially valuable in expensive freezer rooms.',
+      'Drive-in racking lets forklifts drive straight into deep storage lanes to stack pallets one behind another. By cutting out multiple side aisles, you store up to 75% more pallets in the same floor footprint, which is especially valuable in expensive freezer rooms.',
     keyFeatures: [
       'Stacks 2 to 10+ pallets deep on continuous steel support rails',
       'Floor-level steel guide rails protect uprights from forklift bumps',
@@ -271,7 +271,7 @@ export const PRODUCTS_DATA: ProductItem[] = [
     image: mobileShelvingImg,
     diagramType: 'shelving',
     overview:
-      'Mobile shelving places heavy steel racks onto smooth floor tracks. Instead of leaving an empty walkway between every row, rows glide shut and open only where you need to pick—giving you twice the storage in compact rooms.',
+      'Mobile shelving places heavy steel racks onto smooth floor tracks. Instead of leaving an empty walkway between every row, rows glide shut and open only where you need to pick, giving you twice the storage in compact rooms.',
     keyFeatures: [
       'Saves up to 50% floor space compared to fixed static shelving rows',
       'Easy 3-spoke hand crank moves thousands of pounds with light effort',
@@ -480,7 +480,7 @@ export const PROJECTS_DATA: CaseProject[] = [
     location: 'Thames Gateway Logistics Park, London, UK',
     metricSummary: '3,400 Pallet Positions · Installed in 6 Days',
     description:
-      'Converted a 30 ft clear-height distribution hall from wide aisles into narrow-aisle reach-truck selective racking—adding 38% more pallet positions with full floor safety barriers.',
+      'Converted a 30 ft clear-height distribution hall from wide aisles into narrow-aisle reach-truck selective racking, adding 38% more pallet positions with full floor safety barriers.',
     solutionUsed: 'Selective Racking + Warehouse Safety Accessories',
     productSlug: 'selective-racking',
     image: heroWarehouseImg,
@@ -504,7 +504,7 @@ export const PROJECTS_DATA: CaseProject[] = [
     location: 'Pearson Industrial District, Toronto, Canada',
     metricSummary: '1,850 Pallet Slots · Hot-Dip Galvanized',
     description:
-      'Engineered 6-pallet-deep drive-in tunnels and galvanized selective bays inside a -20°C food depot, cutting empty aisle volume and protecting upright posts with heavy floor guide rails.',
+      'Built 6-pallet-deep drive-in tunnels and galvanized selective bays inside a -20°C food depot, cutting empty aisle space and protecting upright posts with heavy floor guide rails.',
     solutionUsed: 'Drive-In Racking + Column Protectors',
     productSlug: 'drive-in-racking',
     image: coldStorageImg,
@@ -523,7 +523,7 @@ export const PROJECTS_DATA: CaseProject[] = [
   },
   {
     id: 'proj-new-facility',
-    title: 'Turnkey Regional Freight Warehouse Fit-Out',
+    title: 'Full-Floor Regional Freight Warehouse Fit-Out',
     category: 'Logistics',
     location: 'DFW Airport Freight Park, Dallas, USA',
     metricSummary: '4,200 Pallet Positions · Full Safety Spec',

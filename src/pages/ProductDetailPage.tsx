@@ -7,6 +7,7 @@ import BayCapacityEstimator from '../components/BayCapacityEstimator';
 import MediaFrame from '../components/ui/MediaFrame';
 import ActionButton from '../components/ui/ActionButton';
 import Reveal from '../components/ui/Reveal';
+import CtaBand from '../components/CtaBand';
 import { COMPANY_CONTACT, PRODUCTS_DATA } from '../data/siteData';
 import { downloadTextFile } from '../utils/quoteStorage';
 
@@ -45,7 +46,7 @@ export default function ProductDetailPage() {
 
   const handleDownloadSpecSheet = () => {
     const content = [
-      `APEXRACK INDUSTRIAL SOLUTIONS — PRODUCT SPECIFICATION SHEET`,
+      `APEXRACK INDUSTRIAL SOLUTIONS | PRODUCT SPECIFICATION SHEET`,
       `===========================================================`,
       `System: ${product.name}`,
       `Category: ${product.categoryGroup}`,
@@ -215,7 +216,7 @@ export default function ProductDetailPage() {
                     type={product.diagramType}
                     heightLabel={product.specs[0]?.value || 'Standard'}
                     widthLabel={product.specs[1]?.value || 'Modular'}
-                    loadLabel={product.specs[3]?.value || 'Engineered Load Spec'}
+                    loadLabel={product.specs[3]?.value || 'Standard Load Rating'}
                   />
                 )}
               </div>
@@ -248,7 +249,7 @@ export default function ProductDetailPage() {
                   {product.applications.map((app) => (
                     <li key={app} className="flex items-start gap-2.5 leading-relaxed">
                       <span className="text-[#F07824] font-bold shrink-0" aria-hidden="true">
-                        —
+                        •
                       </span>
                       <span>{app}</span>
                     </li>
@@ -306,13 +307,15 @@ export default function ProductDetailPage() {
           <aside className="lg:col-span-4 lg:sticky lg:top-24 space-y-5">
             <div className="bg-[#14243A] text-white rounded-2xl p-6 space-y-4">
               <div>
-                <p className="text-xs font-mono text-[#F07824] mb-1">Direct Project Desk</p>
+                <p className="text-xs font-mono text-[#F07824] mb-1">
+                  Direct Quote Desk · Floor Plan Included
+                </p>
                 <h2 className="font-display text-xl sm:text-2xl font-bold">
                   Price {product.name} for Your Warehouse
                 </h2>
                 <p className="text-sm text-slate-300 mt-2 leading-relaxed">
-                  Share your bay count, clear height, and shipping city to get a written price and
-                  layout drawing within 24 business hours.
+                  Tell us how many bays you need, your ceiling height, and your city. We&apos;ll send
+                  a clear price and bay drawing within 1 business day.
                 </p>
               </div>
 
@@ -330,11 +333,22 @@ export default function ProductDetailPage() {
                 variant="primary"
                 className="w-full py-3 min-h-[46px]"
               >
-                <span>Request Quote</span>
+                <span>Request a Quote</span>
                 <ArrowRight className="w-4 h-4 transition-transform duration-150 group-hover:translate-x-0.5" />
               </ActionButton>
 
-              <p className="text-xs sm:text-sm text-slate-400 font-mono tabular-nums">
+              <ul className="space-y-1.5 text-xs text-slate-300 pt-1">
+                <li className="flex items-center gap-2">
+                  <Check className="w-3.5 h-3.5 text-[#F07824] shrink-0" />
+                  <span>Written quote back within 1 business day</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <Check className="w-3.5 h-3.5 text-[#F07824] shrink-0" />
+                  <span>Free beam load &amp; floor slab check before ordering</span>
+                </li>
+              </ul>
+
+              <p className="text-xs sm:text-sm text-slate-400 font-mono tabular-nums pt-2 border-t border-white/10">
                 {COMPANY_CONTACT.primaryPhone} · {COMPANY_CONTACT.salesEmail}
               </p>
             </div>
@@ -377,6 +391,16 @@ export default function ProductDetailPage() {
           </section>
         </Reveal>
       </div>
+
+      <CtaBand
+        eyebrow={`Quick Quote · Free Floor Plan for ${product.name}`}
+        title={`Need Exact Bay Pricing for ${product.name}?`}
+        description="Send your room dimensions and pallet weights to get a clear written quote and floor plan within 1 business day."
+        ctaLabel="Request a Quote"
+        ctaTo={`/request-quote?product=${encodeURIComponent(product.name)}`}
+        secondaryLabel="Contact Us"
+        secondaryTo="/contact"
+      />
     </div>
   );
 }

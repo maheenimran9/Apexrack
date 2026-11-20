@@ -360,18 +360,23 @@ export default function ContactPage() {
 
           <aside className="lg:col-span-4 space-y-5">
             <div className="bg-[#14243A] text-white rounded-2xl p-6 space-y-4">
-              <p className="text-xs font-mono text-[#F07824]">Formal Quote Portal</p>
+              <p className="text-xs font-mono text-[#F07824]">
+                Direct Quote Desk · Free Floor Plan
+              </p>
               <h3 className="font-display text-xl font-bold">
                 Already Know Your Bay Count or Floor Area?
               </h3>
               <p className="text-sm text-slate-300 leading-relaxed">
-                Send your system choices and warehouse size directly on our Request a Quote page to
-                get an itemized hardware and installation quote.
+                Send your rack choices and room size directly so we can price the steel, freight,
+                and install together.
               </p>
               <ActionButton to="/request-quote" variant="primary" className="w-full">
-                <span>Open Request a Quote</span>
+                <span>Request a Quote</span>
                 <ArrowRight className="w-4 h-4 transition-transform duration-150 group-hover:translate-x-0.5" />
               </ActionButton>
+              <p className="text-xs text-slate-400">
+                Includes beam load check · No pressure to commit
+              </p>
             </div>
           </aside>
         </div>

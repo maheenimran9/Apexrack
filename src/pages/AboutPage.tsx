@@ -236,8 +236,10 @@ export default function AboutPage() {
       </section>
 
       <CtaBand
-        title="Ready to Plan Your Warehouse Layout?"
-        description="Send us your facility dimensions or talk directly with our sales desk."
+        eyebrow="Free Floor Layout · 1-Day Written Quote"
+        title="Need More Storage Room Without Moving Building?"
+        description="Share your room dimensions or call our team directly, and we'll send a straightforward layout drawing and quote."
+        ctaLabel="Request a Quote"
         secondaryLabel="Contact Us"
         secondaryTo="/contact"
       />

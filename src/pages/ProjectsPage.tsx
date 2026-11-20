@@ -1,4 +1,5 @@
 import { useMemo, useState } from 'react';
+import { Link } from 'react-router-dom';
 import PageBanner from '../components/PageBanner';
 import ProjectShowcaseCard from '../components/ProjectShowcaseCard';
 import Reveal from '../components/ui/Reveal';
@@ -41,6 +42,24 @@ export default function ProjectsPage() {
       />
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-10 space-y-7">
+        {/* Install Schedule Notice */}
+        <div className="bg-[#14243A] text-white rounded-2xl px-5 py-3.5 flex flex-col sm:flex-row sm:items-center justify-between gap-3 border border-white/10">
+          <div className="text-sm">
+            <span className="font-mono text-xs text-[#F07824] font-semibold mr-2">
+              Install Schedule:
+            </span>
+            <span className="text-slate-200">
+              Our regional crews are booking floor fits across the UK, USA, Canada &amp; UAE this month.
+            </span>
+          </div>
+          <Link
+            to="/request-quote"
+            className="text-sm font-semibold text-[#F07824] hover:text-white transition-colors whitespace-nowrap shrink-0"
+          >
+            Book a Floor Check →
+          </Link>
+        </div>
+
         {/* Sector Filter Bar */}
         <div className="bg-white border border-slate-200/80 rounded-2xl p-4 flex flex-col lg:flex-row lg:items-center justify-between gap-4">
           <div className="flex flex-wrap gap-2" role="group" aria-label="Filter projects by sector">
@@ -91,8 +110,10 @@ export default function ProjectsPage() {
       </div>
 
       <CtaBand
-        title="Want a Layout Like One of These?"
-        description="Send us your building dimensions and pallet weights to get a tailored floor plan and quote."
+        eyebrow="Free Floor Plan · Crews Booking This Month"
+        title="Need a Setup Like One of These?"
+        description="Send your building dimensions and pallet weights so we can draw a layout that fits your room."
+        ctaLabel="Request a Quote"
       />
     </div>
   );

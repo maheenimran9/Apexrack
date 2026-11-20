@@ -82,11 +82,11 @@ export default function ProductsPage() {
       <PageBanner
         eyebrow="Storage Equipment Catalog"
         title="Warehouse Racking & Storage Products"
-        description="Compare load ratings, bay heights, and configurations across all 8 commercial warehouse systems."
+        description="Compare load ratings, bay heights, and configurations across all 8 commercial warehouse systems, with a free floor plan when you request a quote."
         breadcrumbCurrent="Products"
         highlights={[
-          { label: 'Product Lines', value: `${PRODUCTS_DATA.length} Systems` },
-          { label: 'Load Range', value: 'Up to 5,000 lbs' },
+          { label: 'Standard Stock Ships', value: '5–7 Days' },
+          { label: 'Included', value: 'Free Floor Plan' },
           { label: 'Safety Codes', value: 'RMI · SEMA · OSHA' },
         ]}
       />
@@ -94,10 +94,10 @@ export default function ProductsPage() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-10 space-y-7">
         {/* Saved Multi-Product Quote Shortlist Bar */}
         {quoteItems.length > 0 && (
-          <div className="bg-[#14243A] text-white rounded-2xl px-5 py-3.5 flex flex-wrap items-center justify-between gap-4">
+          <div className="bg-[#14243A] text-white rounded-2xl px-5 py-3.5 flex flex-wrap items-center justify-between gap-4 border border-[#F07824]/40">
             <div className="flex flex-wrap items-center gap-2 text-sm">
               <span className="font-mono text-xs text-[#F07824] font-semibold">
-                Quote Shortlist ({quoteItems.length}):
+                Selected for Quote ({quoteItems.length}):
               </span>
               <span className="text-slate-200">{quoteItems.join(' · ')}</span>
             </div>
@@ -113,7 +113,7 @@ export default function ProductsPage() {
                 to={`/request-quote?products=${encodeURIComponent(quoteItems.join(','))}`}
                 className="inline-flex items-center gap-1.5 px-4 py-2 text-sm font-semibold text-white bg-[#F07824] hover:bg-[#D86617] rounded-[20px] transition-colors whitespace-nowrap"
               >
-                <span>Quote All {quoteItems.length} Systems</span>
+                <span>Quote Selected ({quoteItems.length})</span>
                 <ArrowRight className="w-3.5 h-3.5" />
               </Link>
             </div>
@@ -238,7 +238,7 @@ export default function ProductsPage() {
                           key={cp.slug}
                           className="py-3 px-5 font-mono tabular-nums text-[#202B38] text-sm"
                         >
-                          {cp.specs[rowIdx]?.value || '—'}
+                          {cp.specs[rowIdx]?.value || '-'}
                         </td>
                       ))}
                     </tr>
@@ -386,16 +386,16 @@ export default function ProductsPage() {
                   </div>
 
                   <div className="pt-3.5 border-t border-slate-200 flex flex-wrap items-center gap-3">
-                    <ActionButton to={`/products/${flagshipProduct.slug}`} variant="secondary">
-                      <span>View Specs</span>
-                      <ArrowRight className="w-4 h-4 transition-transform duration-150 group-hover:translate-x-0.5" />
-                    </ActionButton>
-
                     <ActionButton
                       to={`/request-quote?product=${encodeURIComponent(flagshipProduct.name)}`}
                       variant="primary"
                     >
-                      Request Quote
+                      <span>Request a Quote</span>
+                      <ArrowRight className="w-4 h-4 transition-transform duration-150 group-hover:translate-x-0.5" />
+                    </ActionButton>
+
+                    <ActionButton to={`/products/${flagshipProduct.slug}`} variant="secondary">
+                      <span>View Specs</span>
                     </ActionButton>
                   </div>
                 </div>
@@ -515,7 +515,7 @@ export default function ProductsPage() {
                               to={`/request-quote?product=${encodeURIComponent(product.name)}`}
                               className="px-4 py-2 min-h-[38px] inline-flex items-center text-sm font-semibold text-white bg-[#F07824] hover:bg-[#D86617] rounded-[20px] transition-[transform,background-color] duration-150 agency-ease hover:-translate-y-px active:scale-[0.98] whitespace-nowrap"
                             >
-                              Quote
+                              Get Quote
                             </Link>
                           </div>
                         </div>
@@ -530,8 +530,10 @@ export default function ProductsPage() {
       </div>
 
       <CtaBand
+        eyebrow="Free Floor Plan · Standard Bays Ship in 5–7 Days"
         title="Not Sure Which Racking Fits Your Floor?"
-        description="Tell us your ceiling height and pallet weight—we will suggest the best layout at zero charge."
+        description="Tell us your ceiling height and pallet weight, and we'll suggest the right bays and send a floor plan."
+        ctaLabel="Request a Quote"
       />
     </div>
   );

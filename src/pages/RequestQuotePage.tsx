@@ -204,7 +204,7 @@ export default function RequestQuotePage() {
   const handleDownloadQuoteSummary = () => {
     if (!submittedRecord) return;
     const lines = [
-      `APEXRACK INDUSTRIAL SOLUTIONS — QUOTE REQUEST RECEIPT`,
+      `APEXRACK INDUSTRIAL SOLUTIONS | QUOTE REQUEST RECEIPT`,
       `======================================================`,
       `Reference: ${submittedRecord.reference}`,
       `Date: ${submittedRecord.submittedAt}`,
@@ -241,14 +241,14 @@ export default function RequestQuotePage() {
   return (
     <div className="bg-[#F4F6F8] min-h-[75vh]">
       <PageBanner
-        eyebrow="Commercial Quotation"
+        eyebrow="Quote Request"
         title="Request a Quote"
-        description="Select one or more storage systems, share your floor details, and get an itemized written quote."
+        description="Pick the systems you need, share your room size, and get a clear written quote."
         breadcrumbCurrent="Request a Quote"
         highlights={[
           { label: 'Step 1: Pick Systems', value: 'Single or Multi-Rack' },
           { label: 'Step 2: Share Size', value: 'Bays or Sq Ft' },
-          { label: 'Step 3: Written Quote', value: 'Within 24 Hours' },
+          { label: 'Step 3: Written Quote', value: '1 Business Day' },
         ]}
       />
 
@@ -304,7 +304,7 @@ export default function RequestQuotePage() {
                         {submittedRecord.products.join(', ')}
                       </strong>{' '}
                       ({submittedRecord.company}, {submittedRecord.country}) is logged. Our desk
-                      will email your itemized quote to{' '}
+                      will email your written quote to{' '}
                       <strong className="text-[#14243A]">{submittedRecord.email}</strong>.
                     </p>
                   </div>
@@ -666,10 +666,10 @@ export default function RequestQuotePage() {
 
                 <div className="pt-3 flex flex-wrap items-center justify-between gap-4 border-t border-slate-200">
                   <p className="text-sm text-slate-500">
-                    Fields marked * are required to prepare your written quote.
+                    Fields marked * help us price your job · Written quote sent within 1 business day
                   </p>
                   <ActionButton type="submit" variant="primary" className="px-7 py-3 min-h-[46px]">
-                    <span>Submit Quote Request</span>
+                    <span>Send Quote Request</span>
                     <ArrowRight className="w-4 h-4 transition-transform duration-150 group-hover:translate-x-0.5" />
                   </ActionButton>
                 </div>
@@ -711,21 +711,33 @@ export default function RequestQuotePage() {
             </div>
 
             <div className="bg-[#14243A] text-white rounded-2xl p-6 space-y-3.5">
-              <h3 className="font-display text-lg font-bold">What Happens Next</h3>
-              <ol className="space-y-2 text-sm text-slate-300 leading-relaxed">
-                <li>
-                  <strong className="text-white">Step 1 — Load Check:</strong> We verify beam spans
-                  and upright ratings for your pallets.
+              <div className="font-mono text-xs text-[#F07824] font-semibold">
+                What We Send Back
+              </div>
+              <h3 className="font-display text-lg font-bold">Included With Your Quote</h3>
+              <ul className="space-y-2 text-sm text-slate-200 leading-relaxed">
+                <li className="flex items-start gap-2">
+                  <Check className="w-4 h-4 text-[#F07824] mt-0.5 shrink-0" />
+                  <span>
+                    <strong className="text-white">Floor Drawing:</strong> Scaled bays &amp;
+                    forklift aisle clearances.
+                  </span>
                 </li>
-                <li>
-                  <strong className="text-white">Step 2 — Floor Match:</strong> Layout &amp; forklift
-                  aisle clearances are confirmed.
+                <li className="flex items-start gap-2">
+                  <Check className="w-4 h-4 text-[#F07824] mt-0.5 shrink-0" />
+                  <span>
+                    <strong className="text-white">Beam &amp; Upright Check:</strong> Verified load
+                    ratings to RMI / SEMA rules.
+                  </span>
                 </li>
-                <li>
-                  <strong className="text-white">Step 3 — Written Quote:</strong> You get itemized
-                  steel, freight, and install pricing.
+                <li className="flex items-start gap-2">
+                  <Check className="w-4 h-4 text-[#F07824] mt-0.5 shrink-0" />
+                  <span>
+                    <strong className="text-white">Clear Price Breakdown:</strong> Steel hardware,
+                    delivery, and site install priced separately.
+                  </span>
                 </li>
-              </ol>
+              </ul>
 
               <div className="pt-3 border-t border-white/15 space-y-2 text-sm">
                 <div className="flex items-center gap-2.5">

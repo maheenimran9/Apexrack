@@ -43,7 +43,7 @@ export default function Footer() {
   }, [devMenuOpen]);
   return (
     <footer className="bg-[#0C1726] text-slate-300 border-t border-white/10">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-9">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-20 md:pb-9">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-9 pb-10 border-b border-white/10">
           {/* Column 1: Company Info */}
           <div className="lg:col-span-4 space-y-4">

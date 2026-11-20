@@ -71,8 +71,10 @@ export default function Navbar() {
             </a>
           </div>
 
-          <div className="hidden md:block text-slate-300 whitespace-nowrap shrink-0">
-            Supply &amp; Installation · {COMPANY_CONTACT.regionsLine}
+          <div className="hidden md:flex items-center gap-3 text-slate-300 whitespace-nowrap shrink-0">
+            <span>
+              <span className="text-[#F07824] font-semibold">Free Floor Plan Included</span> · 5–7 Day Dispatch · {COMPANY_CONTACT.regionsLine}
+            </span>
           </div>
         </div>
       </div>

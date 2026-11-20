@@ -8,6 +8,7 @@ import { HashRouter, Navigate, Route, Routes, useLocation } from 'react-router-d
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import MobileStickyCta from './components/MobileStickyCta';
 import HomePage from './pages/HomePage';
 import ProductsPage from './pages/ProductsPage';
 import ProductDetailPage from './pages/ProductDetailPage';
@@ -60,6 +61,7 @@ export default function App() {
           </Routes>
         </main>
         <Footer />
+        <MobileStickyCta />
       </div>
     </HashRouter>
   );
